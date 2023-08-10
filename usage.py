@@ -29,8 +29,8 @@ syntaxFolds = "\\:="
 ace_editor = dash_ace.DashAceEditor(
         id='demo-editor',
         value='test(a: Integer) -> String := \n    return f"value is {a}"',
-        theme='github',
-        mode='norm',
+        theme='tomorrow',
+        mode='html',
         tabSize=2,
         syntaxKeywords=syntaxKeywords,
         syntaxFolds=syntaxFolds,
@@ -71,4 +71,4 @@ def autocompleter():
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, port=50001, host='0.0.0.0')

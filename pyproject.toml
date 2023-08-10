@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "dash-ace"
+version = "0.1.0"
+description = ""
+authors = ["mozzhorin <mozzhorin@posteo.de>"]
+readme = "README.md"
+packages = [{include = "dash_ace"}]
+
+[tool.poetry.dependencies]
+python = "~3.10"
+
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

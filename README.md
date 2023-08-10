@@ -2,7 +2,7 @@
 
 Dash Ace is a [Plotly Dash](https://dash.plot.ly) component of Ace editor that wraps up a [react ace editor](https://github.com/securingsincity/react-ace)
 
-It supports the following four modes: Python, SQL, Text, Norm and several themes: github, monokai, tomorrow, twilight, textmate.
+It supports the following four modes: Python, SQL, Text, Norm, XML, HTML, JSON and several themes: github, monokai, tomorrow, twilight, textmate.
 If you want other languages and themes, you can fork the repo and modify the code. Dynamic loading of modes and themes are not supported yet.
 
 ## Installation

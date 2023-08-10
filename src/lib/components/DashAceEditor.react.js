@@ -9,6 +9,9 @@ import 'ace-builds/src-min-noconflict/ext-spellcheck';
 
 import "ace-builds/src-min-noconflict/mode-python";
 import "ace-builds/src-min-noconflict/mode-sql";
+import "ace-builds/src-min-noconflict/mode-xml";
+import "ace-builds/src-min-noconflict/mode-html";
+import "ace-builds/src-min-noconflict/mode-json";
 import "ace-builds/src-min-noconflict/theme-github";
 import "ace-builds/src-min-noconflict/theme-monokai";
 import "ace-builds/src-min-noconflict/theme-tomorrow";
@@ -32,7 +35,7 @@ export default class DashAceEditor extends Component {
     customize(editor) {
         const {autocompleter, prefixLine, triggerWords, triggerCaseInsensitive, syntaxKeywords, syntaxFolds} = this.props;
 
-        if (this.props.mode !== 'python' && this.props.mode !== 'javascript' && this.props.mode !== 'sql') {
+        if (this.props.mode !== 'python' && this.props.mode !== 'javascript' && this.props.mode !== 'sql' && this.props.mode !== 'xml' && this.props.mode !== 'html' && this.props.mode !== 'json') {
             editor.getSession().setMode(new CustomMode(syntaxKeywords, syntaxFolds));
         }
 
@@ -97,7 +100,7 @@ export default class DashAceEditor extends Component {
             return (
                 <DiffEditor
                     ref="aceEditor"
-                    mode={(mode !== 'python' && mode !== 'javascript' && mode !== 'sql')? 'python': mode}
+                    mode={mode}
                     theme={theme}
                     value={value}
                     className={classnames('container__editor', className)}
@@ -131,7 +134,7 @@ export default class DashAceEditor extends Component {
         return (
             <AceEditor
                 ref="aceEditor"
-                mode={(mode !== 'python' && mode !== 'javascript' && mode !== 'sql')? 'python': mode}
+                mode={mode}
                 theme={theme}
                 value={value}
 				        className={classnames('container__editor', className)}
